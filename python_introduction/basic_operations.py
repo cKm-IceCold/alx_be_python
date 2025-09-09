@@ -1,6 +1,6 @@
 # Variables for arithmetric
-number1 = 5
-number2 = 10
+number1 = 10
+number2 = 5
 
 # The Addition of arithmetric
 sum = number1 + number2
@@ -8,7 +8,7 @@ sum = number1 + number2
 print(sum)
 
 # The Difference of arithmetric
-difference = number2 - number1
+difference = number1 - number2
 
 print(difference)
 
