@@ -1,7 +1,7 @@
 # values for the variable length and width
 
 length = 10
-width =5
+width = 5
 
 #Calculating the area
 
