@@ -25,4 +25,5 @@ else:
 # Provide a customized reminder
 print(reminder)
 
+# print\s*\(\s*f?['\"]Reminder:\s*
 
