@@ -12,9 +12,9 @@ match priority:
     case "medium":
         reminder = f"Reminder: '{task}' is a medium priority task"
     case "low":
-        reminder = f"Note: '{task}' is a low priority task"
+        reminder = f"Reminder: '{task}' is a low priority task"
     case _:
-        reminder = f"'{task}' has an unknown priority level."
+        reminder = f"Reminder: '{task}' has an unknown priority level."
 
 # Modify message if time-sensitive
 if time_bound == "yes":
@@ -23,4 +23,6 @@ elif time_bound == "no" and priority == "low":
     reminder += ". Consider completing it when you have free time."
 
 # Print the customized reminder
+print(reminder)
+
 print(reminder)
