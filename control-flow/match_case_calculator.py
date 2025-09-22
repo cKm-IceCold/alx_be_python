@@ -1,30 +1,26 @@
-num1 = int(input("Enter the first number:"))
-num2 = int(input("Enter the second number:"))
- 
-operation =input("Choose the operation (+, -, *, /):")
-match operation:
- case "+":
-   result = num1 + num2
-   print(f"The result is {result}")
-  
- case "-":
-    result = num1 - num2
-    print(f"The result is {result}")
+# daily_reminder.py
 
- case "*":
-    result = num1 * num2
-    print(f"The result is {result}")
+# Prompt for a single task
+task = input("Enter your task: ")
+priority = input("Priority (high/medium/low): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
 
- case "/":
-  if num2 != 0:
-     result = num1 / num2
-     print(f"The result is {result}")
-  else:
-    print("Error: Division by zero is not allowed.")
+# Process the task based on priority
+match priority:
+    case "high":
+        reminder = f"Reminder: '{task}' is a high priority task"
+    case "medium":
+        reminder = f"Reminder: '{task}' is a medium priority task"
+    case "low":
+        reminder = f"Note: '{task}' is a low priority task"
+    case _:
+        reminder = f"'{task}' has an unknown priority level."
 
- 
- case _:
-   print("Invalid operation. Please choose +, -, * or /.")
+# Modify message if time-sensitive
+if time_bound == "yes":
+    reminder += " that requires immediate attention today!"
+elif time_bound == "no" and priority == "low":
+    reminder += ". Consider completing it when you have free time."
 
-  
- 
+# Print the customized reminder
+print(reminder)
