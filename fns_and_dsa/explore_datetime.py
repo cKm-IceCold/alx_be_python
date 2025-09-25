@@ -1,19 +1,19 @@
-import datetime
+from datetime import datetime, timedelta, date
 
 def display_current_datetime():
-    import datetime  # Step 1
-    current_date = datetime.datetime.now()   # Step 2
-    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")  # Step 3
+    """Displays the current date and time in YYYY-MM-DD HH:MM:SS format"""
+    current_date = datetime.now()   # current date & time
+    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
     print("Current date and time:", formatted_date)
-    return current_date   # return so we can reuse if needed
+    return current_date   # return so it can be reused
 
 def calculate_future_date():
-    import datetime  # Step 1
+    """Calculates a future date based on user input (in days)"""
     number_of_days = int(input("Enter number of days: "))
-    current_date = datetime.date.today()  # today's date only (YYYY-MM-DD)
-    future_date = current_date + datetime.timedelta(days=number_of_days)  # Step 5
+    current_date = date.today()  # today's date
+    future_date = current_date + timedelta(days=number_of_days)
     print("Future date:", future_date.strftime("%Y-%m-%d"))
 
-# Call functions
+# Run functions
 display_current_datetime()
 calculate_future_date()
