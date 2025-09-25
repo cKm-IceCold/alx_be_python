@@ -1,4 +1,4 @@
-def perform_operation(num1: float, num2: float, operation: str):
+def perform_operation(num1, num2, operation):
   if operation == 'add':
     result = num1 + num2
     print(f"result: {result}")
@@ -21,4 +21,4 @@ def perform_operation(num1: float, num2: float, operation: str):
   else: 
     print("Enter a Valid Operation")
 
-  
+  perform_operation(10, 5, 'add')
